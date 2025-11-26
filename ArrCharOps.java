@@ -214,7 +214,7 @@ public class ArrCharOps {
 
             return -2;
 
-       
+      }
        
         int min = Math.min(str1.length(), str2.length());
        for (int i = 0; i < min; i++) {
