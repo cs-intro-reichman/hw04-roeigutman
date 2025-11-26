@@ -26,7 +26,7 @@ public class Primes {
        i = 2;
        while ( i <= n ) {
        if ( a[i]) {
-       System.out.println( i + " ");
+       System.out.println( i );
       count++; 
        }
       i++;       
