@@ -100,11 +100,15 @@ public class ArrCharOps {
      */
     public static int lastIndexOf(char[] arr, char ch) {
        
+        int lastformat = arr.length -1;
+
+        for( int i = lastformat; i > 0; i--) {     
+
+            if ( arr[i] == ch) {
+                return i;
+            }
+        }
         
-
-
-
-
 
         return -1;
     }
@@ -112,8 +116,20 @@ public class ArrCharOps {
     /* Returns an array which is the concatanation of the two given arrays.
     */
     public static char[] concat(char[] arr1, char[] arr2) {
-        // Replace the following statement with your code
-        return null;
+       
+         char [] arr3 = new char[arr1.length + arr2.length];
+        
+         for (int i = 0; i < arr1.length; i++) {
+            
+            arr3[i] = arr1[i];
+         }
+         for  (int j = 0; j < arr2.length; j++) {
+                 
+           arr3[arr1.length + j] = arr2[j];
+         }
+        
+               return arr3;
+        
     }
 
     /** Returns a new array that can be described as a sub-array of this array.
@@ -122,8 +138,18 @@ public class ArrCharOps {
      *  characters containing the characters "urge".
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        // Replace the following statement with your code
-        return null;
+        
+        char [] arr4 = new char[endIndex - beginIndex];
+
+          for(int i = beginIndex; i < endIndex; i++) {
+
+            arr4[i - beginIndex] = arr[i];
+
+             
+          }
+
+
+        return arr4;
     }
 
      /** Returns a single integer that represents the given array. This integer is sometimes 
@@ -134,8 +160,24 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        // Replace the following statement with your code
-        return 0;
+       
+        if (arr.length == 0) {
+
+            return 0;
+        }
+      
+           int hash = 0;
+           int mul = 7;
+
+         for ( int i = 0; i < arr.length; i++) {
+
+          hash = hash * mul + arr[i];
+
+
+         }
+
+        return hash;
+        
     }
 
     /**
@@ -164,7 +206,37 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        // Replace the following statement with your code
+        
+       int min = Math.min(str1.length(), str2.length());
+       for (int i = 0; i < min; i++) {
+
+        char ch1 = str1.charAt(i);
+        char ch2 = str2.charAt(i);
+         
+        if ( ch1 < ch2) {
+
+            return -1;
+        }
+
+        if ( ch1 > ch2) {
+
+            return 1;
+        }
+             }
+        
+        if( str1.length() < str2.length()) {
+            return -1;
+
+          }
+
+        if ( str1.length() > str2.length()) {
+
+            return 1;
+
+        }
+
         return 0;
     }
 }
+    
+
