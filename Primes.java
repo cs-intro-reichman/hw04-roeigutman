@@ -4,7 +4,7 @@ public class Primes {
      int n = Integer.parseInt(args[0]);
      boolean [] a = new boolean [n + 1];
      int i = 2;
-
+     int count = 0;
      while ( i <= n ) {
           a[i] = true;
             i++;
@@ -20,16 +20,17 @@ public class Primes {
             }
         }
           i++;
-    
+         
      }
-         System.out.println( "Prime numbers up to " + n + ":");
-     i = 2;
-    while ( i <= n ) {
-       if ( a[i])
+       System.out.println( "Prime numbers up to " + n + ":");
+       i = 2;
+       while ( i <= n ) {
+       if ( a[i]) {
        System.out.println( i + " ");
-       i++;
-               } 
-    
+      count++; }
+      i++;       
+    } 
+    System.out.println("There are " + count + " prime between 2 and " + n + " (" + (100 * count) / n + "%" +  " are primes)");
             }
          
         }
