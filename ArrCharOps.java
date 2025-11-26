@@ -36,30 +36,62 @@ public class ArrCharOps {
     /** Returns the char value at the specified index. Assume that the array is non-empty.
      */
     public static char charAt(char[] arr, int index) {
-        // Replace the following statement with your code
-        return 0;
+
+          
+        
+        return arr[index];
     }
 
     /** If the two arrays have the same value in every index, 
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        // Replace the following statement with your code
-        return false;
+        
+         if( arr1.length != arr2.length){
+            return false;
+         }
+         
+        for( int i = 0; i < arr1.length; i++)
+             if( arr1[i] != arr2[i]) {
+                return false;
+
+             }
+        
+        return true;
     }
 
     /** Returns the index within the given array of the first occurrence of the given character.
      *  If no such character is found, returns -1.
      */
     public static int indexOf(char[] arr, char ch) {
-        // Replace the following statement with your code
+        
+
+       
+        for ( int i = 0; i < arr.length; i++) {
+
+            if ( arr[i] == ch) {
+
+                return i;
+            }
+
+        }
+
         return -1;
     }
 
     /** Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        // Replace the following statement with your code
+        
+        for ( int i = fromIndex; i < arr.length; i ++) {
+              
+            if ( arr[i] == ch){
+                return i;
+            }
+
+        }
+
+
         return -1;
     }
 
@@ -67,7 +99,13 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int lastIndexOf(char[] arr, char ch) {
-        // Replace the following statement with your code
+       
+        
+
+
+
+
+
         return -1;
     }
 

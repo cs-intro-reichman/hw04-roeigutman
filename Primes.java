@@ -1,5 +1,46 @@
 public class Primes {
     public static void main(String[] args) {
-        // Replace this statement with your code
-    }
-}
+        
+     int n = Integer.parseInt(args[0]);
+     boolean [] a = new boolean [n + 1];
+     int i = 2;
+
+     while ( i <= n ) {
+          a[i] = true;
+            i++;
+        }
+     i = 2;
+     while ( i * i <= n ) {
+        if ( a[i]) {
+            int j = i * i;
+            while ( j <= n ) {
+                a[j] = false;
+                j += i;
+            
+            }
+        }
+          i++;
+    
+     }
+         System.out.println( "Prime numbers up to " + n + ":");
+     i = 2;
+    while ( i <= n ) {
+       if ( a[i])
+       System.out.println( i + " ");
+       i++;
+               } 
+    
+            }
+         
+        }
+    
+    
+
+    
+ 
+
+    
+    
+    
+    
+    
