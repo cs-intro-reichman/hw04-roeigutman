@@ -11,7 +11,7 @@ public class Primes {
         }
      i = 2;
      while ( i * i <= n ) {
-        if ( a[i]) {
+         if ( a[i])  {
             int j = i * i;
             while ( j <= n ) {
                 a[j] = false;
@@ -27,7 +27,8 @@ public class Primes {
        while ( i <= n ) {
        if ( a[i]) {
        System.out.println( i + " ");
-      count++; }
+      count++; 
+       }
       i++;       
     } 
     System.out.println("There are " + count + " prime between 2 and " + n + " (" + (100 * count) / n + "%" +  " are primes)");
