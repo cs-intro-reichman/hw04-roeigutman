@@ -207,7 +207,16 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         
-       int min = Math.min(str1.length(), str2.length());
+       
+       if ( str1.length() == 0 || str2.length() == 0 
+
+      ||  str1 == null || str2 == null) {
+
+            return -2;
+
+       
+       
+        int min = Math.min(str1.length(), str2.length());
        for (int i = 0; i < min; i++) {
 
         char ch1 = str1.charAt(i);
